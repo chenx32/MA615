@@ -10,3 +10,7 @@ persons <- read.csv("~/Desktop/MA615/class26/persons.csv",header = TRUE,stringsA
 
 sessions <- read.csv("~/Desktop/MA615/class26/sessions.csv",header = TRUE,stringsAsFactors = FALSE) 
 
+library(odbc)
+library(DBI)
+
+con <- dbConnect(odbc(),"MS",UID="Lee",PWD="0123@Lee")
