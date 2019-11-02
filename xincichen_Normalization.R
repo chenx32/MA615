@@ -150,7 +150,6 @@ Direct$Fecoccemp[Direct$Fecoccemp=="UNEMPLOYED"] <- "NOT EMPLOYED"
 
 Direct$Fecoccemp[Direct$Fecoccemp==""] <- NA 
 
-
 #Normalization
 primary_key <- select(Direct,fectransid,contribid,Zip,Fecoccemp,date,amount,recipid)
 
@@ -177,6 +176,3 @@ dbWriteTable(XC, "Company_Info  ", Company_Info,header=TRUE, overwrite=TRUE)
 dbWriteTable(XC, "Time_Info", Time_Info,header=TRUE, overwrite=TRUE)
 dbWriteTable(XC, "Recipient_Info", Recipient_Info,header=TRUE, overwrite=TRUE)
 dbListTables(XC)
-
-
-
