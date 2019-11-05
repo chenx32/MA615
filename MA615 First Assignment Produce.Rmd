@@ -1,0 +1,28 @@
+---
+title: "MA615 First Assignment Produce "
+author: "Xinci Chen"
+date: "9/18/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+Modern Bayesian practice uses various strategies to construct an appropriate “prior” g($\mu$)in the absence of prior experience, leaving many statisticians unconvinced by the resulting Bayesian inferences.Our second example illustrates the difficulty.
+
+Table 3.1 Scores from two tests taken by 22 students, mechanics and vectors.
+```{r,echo=FALSE}
+d1 <- data.frame("mechanics"=c(7, 44, 49, 59, 34, 46, 0, 32, 49, 52, 44),"vectors"= c(51, 69, 41, 70, 42, 40, 40, 45, 57, 64, 61)) 
+d2 <- data.frame("mechanics"=c(36, 42, 5, 22, 18, 41, 48, 31, 42, 46, 63),"vectors"= c(59, 60, 30, 58, 51, 63, 38, 42, 69, 49, 63))
+row.names(d1) <- 1:11
+row.names(d2) <- 1:11
+kable(t(d1))
+kable(t(d2))
+```
+
+Table 3.1 shows the scores on two tests, mechanics and vectors, achieved by n = 22 students. The sample correlation coefficient between the two scores is $\hat{\theta}$ = 0.498,
+
+$$\hat{\theta}=\sum_{i=1}^{22}(m_i-\overline{m})(v_i-\overline{v})/[\sum_{i=1}^{22}(m_i-\overline{m})^2\sum_{i=1}^{22}(v_i-\overline{v})^2]^{1/2}$$
+
+with m and v short for mechanics and vectors, $\overline{m}$ and $\overline{v}$ their averages.
